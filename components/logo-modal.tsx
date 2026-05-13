@@ -11,9 +11,16 @@ export function LogoModal() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="relative inline-flex items-center hover:opacity-80 transition-opacity duration-300"
+        className="relative inline-flex items-center gap-2 hover:opacity-80 transition-opacity duration-300"
         aria-label="View VISIONIX logo"
         suppressHydrationWarning>
+        <Image
+          src="/visionix-logo.png"
+          alt="VISIONIX"
+          width={32}
+          height={32}
+          className="rounded-lg"
+        />
         <span className='font-mono text-sm font-semibold tracking-[0.2em]'>VISIONIX</span>
       </button>
 

@@ -29,7 +29,14 @@ export default function FooterSection() {
                     <Link
                         href="/"
                         aria-label="go home"
-                        className="flex items-center">
+                        className="flex items-center gap-2">
+                        <Image 
+                            src="/visionix-logo.png" 
+                            alt="VISIONIX" 
+                            width={32} 
+                            height={32}
+                            className="rounded-lg"
+                        />
                         <span className='font-mono text-sm font-semibold tracking-[0.2em]'>VISIONIX</span>
                     </Link>
                     <div className="flex flex-col items-center gap-2">
