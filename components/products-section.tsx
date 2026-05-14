@@ -4,32 +4,9 @@ import { Card } from '@/components/ui/card'
 import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
 import { transitionVariants } from "@/lib/utils";
-import { Zap, Shield, Cpu, Smartphone } from 'lucide-react'
+import { Zap } from 'lucide-react'
 import { useScrollAnimation } from '@/hooks/use-scroll-animation'
-import { motion } from 'motion/react'
-
-const products = [
-  {
-    icon: Zap,
-    title: "Lightning Fast",
-    description: "Experience blazing-fast performance optimized for enterprise-level demands with zero latency"
-  },
-  {
-    icon: Shield,
-    title: "Enterprise Security",
-    description: "Bank-grade encryption and security protocols to keep your data protected 24/7"
-  },
-  {
-    icon: Cpu,
-    title: "AI-Powered",
-    description: "Advanced machine learning capabilities integrated seamlessly into your workflow"
-  },
-  {
-    icon: Smartphone,
-    title: "Cross-Platform",
-    description: "Seamless experience across web, mobile, and desktop applications"
-  }
-]
+import { motion } from 'framer-motion'
 
 export default function ProductsSection() {
   const { ref, isVisible } = useScrollAnimation()
@@ -56,39 +33,34 @@ export default function ProductsSection() {
           </TextEffect>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {products.map((product, index) => {
-            const Icon = product.icon
-            return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.95 }}
-                transition={{ 
-                  duration: 0.6, 
-                  delay: index * 0.12,
-                  type: 'spring',
-                  stiffness: 100,
-                  damping: 12
-                }}
-                whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}>
-                <Card
-                  className="p-8 border border-border hover:border-primary/50 transition-all duration-300 group cursor-pointer h-full overflow-hidden relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <motion.div 
-                    className="mb-4 relative z-10"
-                    animate={isVisible ? { rotate: [0, 5, -5, 0] } : {}}
-                    transition={{ duration: 3, repeat: Infinity, repeatDelay: 2 }}>
-                    <div className="inline-flex p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                      <Icon className="w-6 h-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                  </motion.div>
-                  <h3 className="text-xl font-semibold mb-3 relative z-10">{product.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed relative z-10">{product.description}</p>
-                </Card>
-              </motion.div>
-            )
-          })}
+        <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, type: 'spring' }}>
+            <Card className="p-12 border border-white/10 bg-zinc-900/50 backdrop-blur-xl relative overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-50" />
+              
+              <div className="relative z-10 text-center">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-8">
+                  <Zap className="w-3.5 h-3.5" />
+                  Upcoming Product
+                </div>
+                
+                <h3 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 text-white italic">
+                  VISIONIX <span className="text-primary">DECISIONS</span>
+                </h3>
+                
+                <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-medium">
+                  An AI powered business intelligence platform specifically engineered for SMBs.
+                </p>
+                
+                <div className="mt-12 flex justify-center gap-4">
+                  <div className="h-1 w-24 bg-gradient-to-r from-transparent via-primary to-transparent" />
+                </div>
+              </div>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>

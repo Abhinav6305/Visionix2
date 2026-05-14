@@ -69,6 +69,22 @@ const teamMembers = [
     color: "#2962FF",
     image: "/team/shivani.jpeg",
     position: "center 15%"
+  },
+  {
+    name: "ARJUN J",
+    role: "AI ENGINEER",
+    university: "ARIZONA STATE UNIVERISTY -USA",
+    color: "#FF4D00",
+    image: "/team/ARJUN.png",
+    position: "center 10%"
+  },
+  {
+    name: "NAVYA",
+    role: "UI/UX DESIGNER",
+    university: "ST. PETER'S ENGINEERING COLLEGE-HYDERABAD",
+    color: "#00E676",
+    image: "/team/NAVYA.jpeg",
+    position: "center 15%"
   }
 ]
 
