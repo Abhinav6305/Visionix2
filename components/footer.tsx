@@ -29,15 +29,17 @@ export default function FooterSection() {
                     <Link
                         href="/"
                         aria-label="go home"
-                        className="flex items-center gap-2">
-                        <Image 
-                            src="/visionix-logo.png" 
-                            alt="VISIONIX" 
-                            width={32} 
-                            height={32}
-                            className="rounded-lg"
-                        />
-                        <span className='font-mono text-sm font-semibold tracking-[0.2em]'>VISIONIX</span>
+                        className="flex flex-col items-center gap-4 group">
+                        <div className="relative w-12 h-12 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                            <Image 
+                                src="/visionix-logo.png" 
+                                alt="VISIONIX" 
+                                fill
+                                className="rounded-xl object-contain shadow-2xl shadow-primary/20"
+                                sizes="48px"
+                            />
+                        </div>
+                        <span className='font-mono text-base font-bold tracking-[0.3em] text-white uppercase'>VISIONIX</span>
                     </Link>
                     <div className="flex flex-col items-center gap-2">
                         <p className="text-muted-foreground text-sm">Phone: <a href="tel:9618587055" className="text-foreground hover:text-primary transition-colors">9618587055</a></p>

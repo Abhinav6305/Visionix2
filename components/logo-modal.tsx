@@ -11,17 +11,20 @@ export function LogoModal() {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="relative inline-flex items-center gap-2 hover:opacity-80 transition-opacity duration-300"
+        className="relative inline-flex items-center gap-3 hover:opacity-80 transition-opacity duration-300 group flex-shrink-0"
         aria-label="View VISIONIX logo"
         suppressHydrationWarning>
-        <Image
-          src="/visionix-logo.png"
-          alt="VISIONIX"
-          width={32}
-          height={32}
-          className="rounded-lg"
-        />
-        <span className='font-mono text-sm font-semibold tracking-[0.2em]'>VISIONIX</span>
+        <div className="relative w-9 h-9 flex-shrink-0">
+          <Image
+            src="/visionix-logo.png"
+            alt="VISIONIX"
+            fill
+            className="rounded-lg object-contain"
+            sizes="36px"
+            priority
+          />
+        </div>
+        <span className='font-mono text-base font-bold tracking-[0.2em] bg-clip-text text-transparent bg-gradient-to-r from-white to-white/70'>VISIONIX</span>
       </button>
 
       <AnimatePresence>
@@ -53,18 +56,19 @@ export function LogoModal() {
                 </button>
 
                 {/* Logo Container */}
-                <div className="aspect-square w-full relative overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10 flex items-center justify-center">
+                <div className="aspect-video w-full relative overflow-hidden bg-zinc-950 flex items-center justify-center border-b border-white/5">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-from)_0%,_transparent_100%)] from-primary/20" />
                   <motion.div
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.1, duration: 0.4 }}
-                    className="relative w-full h-full p-8 flex items-center justify-center">
+                    className="relative w-full h-full p-12 flex items-center justify-center">
                     <Image
                       src="/visionix-logo.png"
                       alt="VISIONIX Logo"
-                      width={400}
-                      height={400}
-                      className="w-auto h-auto max-w-full max-h-full object-contain"
+                      width={500}
+                      height={500}
+                      className="w-auto h-auto max-w-[80%] max-h-[80%] object-contain drop-shadow-[0_0_30px_rgba(var(--primary),0.3)]"
                       priority
                     />
                   </motion.div>
