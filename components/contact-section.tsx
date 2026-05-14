@@ -212,7 +212,8 @@ export default function ContactSection() {
                 type="submit"
                 size="lg"
                 disabled={status === 'loading'}
-                className="w-full relative overflow-hidden group">
+                className="w-full relative overflow-hidden group"
+                suppressHydrationWarning>
                 <motion.div 
                   className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"
                   animate={status === 'loading' ? { x: ['-100%', '100%'] } : {}}

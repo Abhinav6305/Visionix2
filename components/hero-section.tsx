@@ -12,7 +12,7 @@ export default function HeroSection() {
             <section className='relative w-full py-12 md:py-24 lg:min-h-screen lg:flex lg:items-center'>
                 <div className="container mx-auto px-6 sm:px-8 lg:px-12">
                     <div className="relative max-w-5xl mx-auto lg:mx-0 lg:text-left text-center">
-                        <div className='inline-block mb-8 lg:mb-10'>
+                        <div className='mb-6 lg:mb-10 flex justify-center lg:justify-start'>
                             <DecryptedText
                                 text="Building Tomorrow's Solutions Today"
                                 animateOn="view"
@@ -20,7 +20,7 @@ export default function HeroSection() {
                                 sequential
                                 useOriginalCharsOnly={false}
                                 speed={70}
-                                className='font-mono text-[11px] sm:text-xs md:text-sm text-white/90 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg backdrop-blur-md'
+                                className='font-mono text-[10px] sm:text-xs text-white/70 bg-white/5 px-3 py-1 rounded border border-white/10 uppercase tracking-widest'
                             />
                         </div>
                         

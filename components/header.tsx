@@ -4,7 +4,7 @@ import {Menu, X} from 'lucide-react'
 import {Button} from '@/components/ui/button'
 import React from 'react'
 import { ThemeToggle } from '@/components/theme-toggle'
-import { LogoModal } from '@/components/logo-modal'
+import Image from 'next/image'
 
 export const HeroHeader = () => {
     const [menuState, setMenuState] = React.useState(false)
@@ -16,7 +16,16 @@ export const HeroHeader = () => {
                 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 transition-all duration-300">
                     <div className="relative flex flex-wrap items-center justify-between py-4 lg:py-5">
                         <div className="flex items-center justify-between w-full lg:w-auto">
-                            <LogoModal />
+                             <div className="relative w-9 h-9 flex-shrink-0">
+                                <Image
+                                    src="/logo/logo.png"
+                                    alt="VISIONIX"
+                                    fill
+                                    className="rounded-lg object-contain"
+                                    sizes="36px"
+                                    priority
+                                />
+                             </div>
 
                             <button
                                 onClick={() => setMenuState(!menuState)}
