@@ -8,11 +8,11 @@ import { transitionVariants } from "@/lib/utils";
 
 export default function HeroSection() {
     return (
-        <main className="overflow-x-hidden min-h-[100dvh] flex flex-col justify-center pt-[80px] lg:pt-0">
-            <section className='relative w-full py-12 md:py-24 lg:h-screen lg:flex lg:items-center'>
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="relative max-w-4xl mx-auto lg:mx-0 lg:text-left text-center">
-                        <div className='inline-block mb-6 lg:mb-10'>
+        <main className="overflow-x-hidden min-h-[100dvh] flex flex-col pt-24 lg:pt-0 lg:justify-center">
+            <section className='relative w-full py-12 md:py-24 lg:min-h-screen lg:flex lg:items-center'>
+                <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+                    <div className="relative max-w-5xl mx-auto lg:mx-0 lg:text-left text-center">
+                        <div className='inline-block mb-8 lg:mb-10'>
                             <DecryptedText
                                 text="Building Tomorrow's Solutions Today"
                                 animateOn="view"
@@ -20,7 +20,7 @@ export default function HeroSection() {
                                 sequential
                                 useOriginalCharsOnly={false}
                                 speed={70}
-                                className='font-mono text-[10px] sm:text-xs md:text-sm text-muted-foreground bg-white/5 border border-white/10 px-3 py-1 rounded-full uppercase tracking-widest'
+                                className='font-mono text-[11px] sm:text-xs md:text-sm text-white/90 bg-white/10 border border-white/20 px-4 py-1.5 rounded-full uppercase tracking-[0.2em] shadow-lg backdrop-blur-md'
                             />
                         </div>
                         

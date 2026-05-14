@@ -32,7 +32,7 @@ export default function FooterSection() {
                         className="flex flex-col items-center gap-4 group">
                         <div className="relative w-12 h-12 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
                             <Image 
-                                src="/visionix-logo.png" 
+                                src="/logo/logo.png" 
                                 alt="VISIONIX" 
                                 fill
                                 className="rounded-xl object-contain shadow-2xl shadow-primary/20"

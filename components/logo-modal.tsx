@@ -16,7 +16,7 @@ export function LogoModal() {
         suppressHydrationWarning>
         <div className="relative w-9 h-9 flex-shrink-0">
           <Image
-            src="/visionix-logo.png"
+            src="/logo/logo.png"
             alt="VISIONIX"
             fill
             className="rounded-lg object-contain"
@@ -64,7 +64,7 @@ export function LogoModal() {
                     transition={{ delay: 0.1, duration: 0.4 }}
                     className="relative w-full h-full p-12 flex items-center justify-center">
                     <Image
-                      src="/visionix-logo.png"
+                      src="/logo/logo.png"
                       alt="VISIONIX Logo"
                       width={500}
                       height={500}
